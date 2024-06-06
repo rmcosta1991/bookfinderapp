@@ -1,0 +1,126 @@
+/* Importing a font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background: linear-gradient(to bottom, #f6d365, #fda085); /* Color gradient */
+}
+
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  background-color: rgba(255, 255, 255, 0.9); /* White background with transparency */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #f16664; /* Rosy red */
+  font-family: 'Roboto', sans-serif; /* Font consistent with body text */
+  font-size: 36px; /* Slightly smaller size for a more balanced look */
+  margin-bottom: 20px;
+}
+
+form {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+input[type="text"] {
+  width: calc(100% - 140px);
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px; /* Softer border */
+  background-color: #f1f1f1; /* Lighter background color */
+}
+
+button[type="submit"] {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px; /* Softer border */
+  background-color: #f16664; /* Rosy red */
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #e45d5c; /* Darker shade on hover for visual feedback */
+}
+
+.results {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.book {
+  border-radius: 10px;
+  padding: 15px;
+  background-color: #fff; /* White background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Adding transition for shadow and transform */
+}
+
+.book:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px); /* Moving upwards on hover for a lifting effect */
+}
+
+.book img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.book-details {
+  padding-top: 10px;
+}
+
+.book h2 {
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.book p {
+  font-size: 14px;
+  margin: 5px 0;
+  color: #666;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.results .book {
+  animation: fadeIn 0.5s ease forwards;
+  animation-delay: calc(var(--index) * 0.1s);
+}
+
+
+
+
+
+
+
+
+
+  
